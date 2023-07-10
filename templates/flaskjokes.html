@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhySoSerious?!</title>
+    <link rel="shortcut icon" href="/static/imgs/whysoserious.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="30;url=http://127.0.0.1:5000/" />
+    <style>
+    body {background-color:#191919;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+    h1{text-align:center;font-family: "Gothic Joker";color:#ffffff;background-color:#191919;font-size:90px;}
+    p {text-align:center;font-family:"Gothic Joker";font-size:45px;font-style:normal;font-weight:normal;color:#ffffff;background-color:#191919;}
+    p.about {text-align:left;font-family:"Gothic Joker";font-size:18px;font-style:normal;font-weight:normal;color:#ffffff;background-color:#191919; margin-left: 10%;}
+	.bottom {margin-top: 100px;}
+    .joke {text-align:center;font-family:"Gothic Joker";font-size:60px;font-style:normal;font-weight:normal;color:#ffffff;background-color:#191919; margin-outside: 50px; padding: 50px;}
+    </style>
+</head>
+<body>
+<h1>Why So Serious?!</h1>
+<p>Get your free joke below: </p>
+<div class="joke">
+    {{ Joker }}
+</div>
+<div class="joke">
+    {{ Witzbold }}
+</div>
+<div class="bottom">
+	<p class="about">The website is made with Python and Flask</p>
+	<p class="about">&copy; 2023</p>
+</div>
+</body>
+</html>
