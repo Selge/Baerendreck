@@ -4,5 +4,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('buchstabe'),
+    path('buchstabe', views.buchstabe_liste),
 ]
