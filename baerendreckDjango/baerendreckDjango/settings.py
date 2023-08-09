@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'woerterbuch.apps.WoerterbuchConfig',
-    'buchstabe.apps.BuchstabeConfig'
+    'buchstabe.apps.BuchstabeConfig',
 ]
 
 MIDDLEWARE = [
