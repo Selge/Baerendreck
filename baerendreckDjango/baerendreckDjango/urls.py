@@ -5,5 +5,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('buchstabe/', views.buchstabe_liste),
-    path('buchstabe/<str:pk>/', )
+    path('buchstabe/<str:pk>/', views.buchstabe)
 ]
