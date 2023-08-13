@@ -6,4 +6,4 @@ def index(request):
     return render(request, 'baerendreck.html')
 
 
-def etwas
+def 
