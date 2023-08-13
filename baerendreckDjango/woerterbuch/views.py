@@ -7,4 +7,4 @@ def index(request):
 
 
 def buchstabe(request):
-    return render 
+    return render
