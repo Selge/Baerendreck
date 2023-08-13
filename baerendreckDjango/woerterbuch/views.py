@@ -8,3 +8,6 @@ def index(request):
 
 def buchstabe(request):
     return render(request, 'Wörtebuch.html')
+
+
+
