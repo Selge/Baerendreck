@@ -11,4 +11,4 @@ def buchstabe(request):
 
 
 def buchstabe_liste(request, pk):
-    return render(request, 'Buchstabe.html')
+    return render(request, 'Buchstabe.html', {})
