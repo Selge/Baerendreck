@@ -9,3 +9,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('woerterbuch.urls', namespace='worterbuch')),
     path('about/', include('about.urls', namespace='about')),
+]
