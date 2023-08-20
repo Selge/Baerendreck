@@ -45,7 +45,7 @@ ROOT_URLCONF = 'baerendreckDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.joinBASE_DIR / 'woerterbuch/../templates']
+        'DIRS': [os.path.join(BASE_DIR / 'woerterbuch/../templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
