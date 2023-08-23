@@ -15,4 +15,4 @@ def buchstabe_liste(request, pk):
 
 
 def page_not_found():
-    ...
+    return render()
