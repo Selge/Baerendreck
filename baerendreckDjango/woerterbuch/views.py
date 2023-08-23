@@ -14,5 +14,5 @@ def buchstabe_liste(request, pk):
     return render(request, 'Buchstabe.html', {'buchstabe': get_object_or_404(Buchstabe, pk=buchstabe)})
 
 
-def page_not_found():
+def page_not_found(request):
     return render(request, '404.html')
