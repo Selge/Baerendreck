@@ -5,7 +5,6 @@ from django.conf.urls.static import static
 
 
 handler404 = 'core.views.page_not_found'
-handler500 = 'core.views.server_error'
 
 
 urlpatterns = [
