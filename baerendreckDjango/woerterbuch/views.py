@@ -3,16 +3,16 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'woerterbuch/baerendreck.html')
+    return render(request, 'woerterbuch/../templates/baerendreck.html')
 
 
 def buchstabe(request):
-    return render(request, 'woerterbuch/Wörtebuch.html')
+    return render(request, 'woerterbuch/../templates/Wörtebuch.html')
 
 
 def buchstabe_liste(request, pk):
-    return render(request, 'woerterbuch/Buchstabe.html', {'buchstabe': get_object_or_404(Buchstabe, pk=buchstabe)})
+    return render(request, 'woerterbuch/../templates/Buchstabe.html', {'buchstabe': get_object_or_404(Buchstabe, pk=buchstabe)})
 
 
 def page_not_found(request):
-    return render(request, 'woerterbuch/404.html')
+    return render(request, 'woerterbuch/../templates/404.html')
