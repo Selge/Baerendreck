@@ -15,8 +15,10 @@ class Dialekt(models.Model):
 
 
 class Buchstabe(models.Model):
+    letter = models.CharField("Buchstabe", max_length=1)
+    slug = models.SlugField("Slug", unique=True)
     def __str__(self):
-        return self.title
+        return self.letter
 
 
 class Wort(models.Model):
