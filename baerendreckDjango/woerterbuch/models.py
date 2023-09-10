@@ -16,7 +16,16 @@ class Dialekt(models.Model):
 
 class Buchstabe(models.Model):
     letter = models.CharField("Buchstabe", max_length=1)
-    slug = models.SlugField("Slug", unique=True)
+    dialect = models.ForeignKey(
+        Dialekt,
+        verbose_name="Dialekt",
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name='Buchstaben',
+        help_text='Bitte, wählen Sie eine Dialekte aus'
+    )
+
     def __str__(self):
         return self.letter
 
