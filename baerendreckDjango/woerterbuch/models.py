@@ -16,7 +16,7 @@ class Dialekt(models.Model):
 
 class Buchstabe(models.Model):
     def __str__(self):
-        return self.text
+        return self.title
 
 
 class Wort(models.Model):
