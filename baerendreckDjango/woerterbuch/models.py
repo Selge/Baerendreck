@@ -10,6 +10,9 @@ class Dialekt(models.Model):
     class Meta:
         verbose_name_plural = 'Dialekte'
 
+    def __str__(self):
+        return self.title
+
 
 class Buchstabe(models.Model):
     ...
