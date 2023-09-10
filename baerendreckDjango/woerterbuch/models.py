@@ -7,6 +7,8 @@ class Dialekt(models.Model):
     slug = models.SlugField("Slug", unique=True)
     description = models.TextField("Beschreibung")
 
+    class Meta:
+        ...
 
 
 class Buchstabe(models.Model):
