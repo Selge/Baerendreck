@@ -15,7 +15,8 @@ class Dialekt(models.Model):
 
 
 class Buchstabe(models.Model):
-    ...
+    def __str__(self):
+        return self.text[:30]
 
 
 class Wort(models.Model):
