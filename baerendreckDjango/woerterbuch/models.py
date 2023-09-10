@@ -8,7 +8,7 @@ class Dialekt(models.Model):
     description = models.TextField("Beschreibung")
 
     class Meta:
-        ...
+        verbose_name_plural = 'Группы'
 
 
 class Buchstabe(models.Model):
