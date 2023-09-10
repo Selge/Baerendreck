@@ -20,4 +20,5 @@ class Buchstabe(models.Model):
 
 
 class Wort(models.Model):
-    ...
+    def __str__(self):
+        return self.text
