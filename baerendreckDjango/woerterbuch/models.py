@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Dialekt(models.Model):
-    title = models.TextField("Dialekt", max_length=200)
-    slug = models.SlugField("Slug", unique=True, default='Deutsch')
-    description = models.TextField("Beschreibung", max_length=500, blank=True, null=True)
+    title = models.CharField("Dialekt", max_length=200)
+    slug = models.SlugField("Slug", unique=True)
+    description = models.TextField("Beschreibung", blank=True, null=True)
 
     class Meta:
         verbose_name_plural = 'Dialekte'
@@ -14,11 +14,11 @@ class Dialekt(models.Model):
 
 
 class Buchstabe(models.Model):
-    letter = models.TextField("Buchstabe", max_length=1)
+    letter = models.CharField("Buchstabe", max_length=1)
     dialect = models.ForeignKey(
         Dialekt,
         verbose_name="Dialekt",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
         related_name='Buchstaben',
@@ -40,20 +40,20 @@ class Wort(models.Model):
     dialect = models.ForeignKey(
         Dialekt,
         verbose_name="Dialekt",
-        on_delete=models.CASCADE,
-        related_name='Dialekt',
-        help_text='Bitte, wählen Sie eine Dialekte aus',
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='Dialekt',
+        help_text='Bitte, wählen Sie eine Dialekte aus'
     )
     letter = models.ForeignKey(
         Buchstabe,
         verbose_name="Buchstabe",
-        on_delete=models.CASCADE,
-        related_name='Buchstabe',
-        help_text='Bitte, wählen Sie eine Buchstabe aus',
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='Buchstabe',
+        help_text='Bitte, wählen Sie eine Buchstabe aus'
     )
 
     class Meta:
