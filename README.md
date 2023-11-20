@@ -1,2 +1,0 @@
-# Baerendreck
-German dialects dictionary
