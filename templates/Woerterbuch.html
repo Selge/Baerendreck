@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bärendreck {{ Mundart }}</title>
+    <link rel="shortcut icon" href="/static/bilder/Lederhosen.png">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1><a href="/">Bärendreck</a></h1>
+<p class="title">{{ Mundart }}</p>
+<div>
+    <table class="woerterbuch">
+            <tr>
+                <th><b><u>Mundart</u></b></th>
+                <th><b><u>Hochdeutsch</u></b></th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.das_wort_dial }}</td>
+                <td>{{ item.hochdeutsch_wort }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+</div>
+<div class="bottom">
+	<p class="about">github.com/Selge</p>
+	<p class="about">&copy; 2024</p>
+</div>
+</body>
+</html>
